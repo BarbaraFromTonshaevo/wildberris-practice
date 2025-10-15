@@ -15,10 +15,6 @@ const getGoods = () => {
             getData()
         })
     })
-
-    localStorage.setItem('goods', JSON.stringify({
-        name: 'all'
-    }))
 }
 
 getGoods()
