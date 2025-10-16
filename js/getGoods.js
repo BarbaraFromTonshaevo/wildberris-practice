@@ -54,6 +54,13 @@ const getGoods = () => {
     if(localStorage.getItem('goods') && window.location.pathname === "/goods.html") {
         renderGoods(JSON.parse(localStorage.getItem('goods')))
     }
+
+    const moreLink = document.querySelector('.more')
+    if(moreLink){
+        moreLink.addEventListener('click', () => {
+            getData(moreLink.textContent, moreLink.dataset.field)
+        })
+    }
 }
 
 getGoods()
